@@ -46,3 +46,10 @@ Thumbs.db
 
 # Maven ignore
 .flattened-pom.xml
+
+# wrapper ignore
+.mvn
+wrapper
+maven-wrapper.jar
+maven-wrapper.properties
+MavenWrapperDownloader.java
