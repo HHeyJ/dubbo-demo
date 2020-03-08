@@ -1,0 +1,2 @@
+pickMask=com.hyq.spistudy.dubbospi.impl.PickMask
+weakMask=com.hyq.spistudy.dubbospi.impl.WearMask
