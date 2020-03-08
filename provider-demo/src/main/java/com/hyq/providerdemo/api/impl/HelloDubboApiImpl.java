@@ -2,7 +2,9 @@ package com.hyq.providerdemo.api.impl;
 
 import com.hyq.providerdemo.api.HelloDubboApi;
 import com.hyq.providerdemo.api.Result;
+import org.apache.dubbo.common.URL;
 import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.rpc.RpcContext;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,6 +17,8 @@ public class HelloDubboApiImpl implements HelloDubboApi {
 
     @Override
     public Result<String> helloDubbo(String name) {
-        return Result.buildSuccess("hello " + name + ", welcome to use dubbo");
+
+        URL url = RpcContext.getContext().getUrl();
+        return Result.buildSuccess(name + ": 调用：" + url.getAddress() + "成功～");
     }
 }
